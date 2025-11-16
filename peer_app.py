@@ -682,7 +682,7 @@ with tab1:
             showlegend=False,
             xaxis_title="",
             yaxis_title="Percent of Total Revenue (%)",
-            height=400,
+            height=600,
             margin=dict(t=80),
             transition_duration=500,
             transition_easing="cubic-in-out",
@@ -751,7 +751,7 @@ with tab1:
             yaxis_title="Percentage of Students (%)",
         
             margin=dict(t=80),
-            height=500,
+            height=600,
             transition_duration=1000,
             transition_easing="cubic-in-out",
             plot_bgcolor='white',
@@ -987,3 +987,4 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
