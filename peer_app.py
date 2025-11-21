@@ -219,7 +219,7 @@ def calculate_funding_metrics(df_filtered):
     
     return actual_resources, adequate_resources, ase, df_merged, df_demographics, df_revenue, illinois_negative_gap_sum, illinois_negative_gap_sum_perschool 
 
-st.image("logo.jpg")
+st.image("logo.png")
 
 
 tab0,tab1,tab2,tab3 = st.tabs(["Start Here!","School District View","Legislative View","About"]) # Erykah - Change tab names
@@ -987,3 +987,4 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
