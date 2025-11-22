@@ -674,7 +674,7 @@ with tab1:
         # Calculate the max value to set y-axis range
 
         max_revenue = df_revenue['Revenue Percentages'].max()
-        y_rev_max = max_revenue * 1.1  # 10% higher than max value
+        y_rev_max = max_revenue * 1.3  # 30% higher than max value
 
         fig_rev.update_layout(
             title="",
@@ -740,7 +740,7 @@ with tab1:
         # Calculate max value and set y-axis range
 
         max_demographic = df_demographics['Demographic Percentages'].max()
-        y_demo_max = max_demographic * 1.1  # 10% higher than max value
+        y_demo_max = max_demographic * 1.3  # 30% higher than max value
 
         fig_demo.update_layout(
             showlegend=False,
@@ -987,5 +987,6 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
