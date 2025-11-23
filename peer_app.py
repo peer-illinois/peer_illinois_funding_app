@@ -689,8 +689,12 @@ with tab1:
             paper_bgcolor='white',
             font=dict(color='#141554'),
             xaxis=dict(
-                tickfont=dict(color='#141554', size=12),
-                color='#141554'
+                fig_demo.update_layout(
+                    xaxis=dict(
+                        tickangle=0,
+                        tickfont=dict(color='#141554', size=10),
+                        color='#141554',
+                        automargin=True  # Automatically adjust margins for labels
             ),
             yaxis=dict(
                 tickformat='.0%',
@@ -987,6 +991,7 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
 
