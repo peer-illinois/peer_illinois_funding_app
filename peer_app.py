@@ -710,8 +710,8 @@ with tab1:
 
 <sub><b>Other state funding</b> comes from grants specifically for special education, transportation, bilingual education, and career and technical education.</sub>
                     
-<sub><b>Note:</b> 1) You may have to double click on an empty part of the chart to correct the zooming (or double tap if you are using a phone or tablet). 2) 0 percent displayed above a bar may mean there was less than 1 percent, not that there was $0 of funding. Hover over the bar to see the true percentage, or tab on the bar if you are using a phone or tablet.</sub> 
-                    """,unsafe_allow_html=True) # Erykah - Revenue by source context
+<sub><b>Note:</b> 1) If 0% is displayed above a bar it may mean that the funding comprised less than 1% of total funding not that there was $0 in funding from that source. Hover over the bar to see the true percentage, or tap on the bar if you are using a phone or tablet.</sub> 
+                    """,unsafe_allow_html=True)
 
 
     # Expandable container for demographics
@@ -991,6 +991,7 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
 
