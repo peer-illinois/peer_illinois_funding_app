@@ -777,7 +777,7 @@ with tab1:
         st.plotly_chart(fig_demo, width="content")
         st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2025](https://www.isbe.net/reportcard)</sub>
                     
-<sub><b>Notes:</b> 1) If no percentage is displayed above the bar it means that this data was redacted by the Illinois State Board of Education, not that there are 0 students of the demographic group. 2) If 0% is displayed above the bar it may mean that the demographic group comprised less than 1% not that there were 0 students of that demographic group. Hover over the bar to see the true percentage, or tap on the bar if you are using a phone or tablet. 3) Percentages do not add up to 100 percent. For more information on this see the "About the Data" note in the "About" tab.</sub> 
+<sub><b>Notes:</b> 1) If no percentage is displayed above the bar it means that this data was redacted by the Illinois State Board of Education (ISBE), not that there are 0 students of the demographic group. ISBE redacts demographic data when the student count is below 10. 2) If 0% is displayed above the bar it may mean that the demographic group comprised less than 1% not that there were 0 students of that demographic group. Hover over the bar to see the true percentage, or tap on the bar if you are using a phone or tablet. 3) Percentages do not add up to 100 percent. For more information on this see the "About the Data" note in the "About" tab.</sub> 
                     """,unsafe_allow_html=True)
 
 with tab2:
@@ -991,6 +991,7 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
 
