@@ -708,7 +708,7 @@ with tab1:
 
 <sub><b>Other state funding</b> comes from grants specifically for special education, transportation, bilingual education, and career and technical education.</sub>
                     
-<sub><b>Note:</b> 1) You may have to double click on the chart (or double tap on your phone or tablet) to correct the zooming. 2) 0 percent may mean there was less than 1 percent, not $0 of funding. Hover over the bar to see the true percentage.</sub> 
+<sub><b>Note:</b> 1) You may have to double click on an empty part of the chart to correct the zooming (or double tap if you are using a phone or tablet). 2) 0 percent displayed above a bar may mean there was less than 1 percent, not that there was $0 of funding. Hover over the bar to see the true percentage, or tab on the bar if you are using a phone or tablet.</sub> 
                     """,unsafe_allow_html=True) # Erykah - Revenue by source context
 
 
@@ -770,10 +770,10 @@ with tab1:
         )
         fig_demo.update_yaxes(title_font_color='#141554')
         
-        st.plotly_chart(fig_demo, use_container_width=True)
+        st.plotly_chart(fig_demo, width="content")
         st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2025](https://www.isbe.net/reportcard)</sub>
                     
-<sub><b>Notes:</b> 1) You may have to double click on the chart (or double tap on your phone or tablet) to correct the zooming. 2) No data means that it was redacted by the Illinois State Board of Education. 3) 0 percent may mean there was less than 1 percent, not 0 students. Hover over the bar to see the true percentage. 4) Percentages do not add up to 100 percent. For more information on this see "About".</sub> 
+<sub><b>Notes:</b> 1) You may have to double click on an empty part of the chart to correct the zooming, or double tap if you are using a phone or tablet. 2) No data means that it was redacted by the Illinois State Board of Education. 3) 0 percent may mean there was less than 1 percent, not 0 students. Hover over the bar to see the true percentage. 4) Percentages do not add up to 100 percent. For more information on this see "About".</sub> 
                     """,unsafe_allow_html=True)
 
 with tab2:
@@ -987,6 +987,7 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
 
