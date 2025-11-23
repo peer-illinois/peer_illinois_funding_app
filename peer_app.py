@@ -677,33 +677,30 @@ with tab1:
         y_rev_max = max_revenue * 1.3  # 30% higher than max value
 
         fig_rev.update_layout(
-            title="",
-            showlegend=False,
-            xaxis_title="",
-            yaxis_title="Percent of Total Revenue (%)",
-            height=600,
-            margin=dict(t=80),
-            transition_duration=500,
-            transition_easing="cubic-in-out",
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            font=dict(color='#141554'),
-            xaxis=dict(
-                fig_demo.update_layout(
-                    xaxis=dict(
-                        tickangle=0,
-                        tickfont=dict(color='#141554', size=10),
-                        color='#141554',
-                        automargin=True  # Automatically adjust margins for labels
-                    )
-            ),
-            yaxis=dict(
-                tickformat='.0%',
-                range=[0,y_rev_max],
-                tickfont=dict(color='#141554', size=12),
-                color='#141554'
-            ),
-        )
+    title="",
+    showlegend=False,
+    xaxis_title="",
+    yaxis_title="Percent of Total Revenue (%)",
+    height=600,
+    margin=dict(t=80),
+    transition_duration=500,
+    transition_easing="cubic-in-out",
+    plot_bgcolor='white',
+    paper_bgcolor='white',
+    font=dict(color='#141554'),
+    xaxis=dict(
+        tickangle=0,
+        tickfont=dict(color='#141554', size=10),
+        color='#141554',
+        automargin=True
+    ),
+    yaxis=dict(
+        tickformat='.0%',
+        range=[0,y_rev_max],
+        tickfont=dict(color='#141554', size=12),
+        color='#141554'
+    )
+)
         fig_rev.update_yaxes(title_font_color='#141554')
         st.plotly_chart(fig_rev, use_container_width=True)
         st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2025](https://www.isbe.net/reportcard)</sub>""",unsafe_allow_html=True)
@@ -992,6 +989,7 @@ PEER Illinois is bringing together students, parents, school community members a
                 """,unsafe_allow_html=True)    
     
                                  
+
 
 
 
