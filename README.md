@@ -1,7 +1,6 @@
-# Illinois School District Resource Inequality App
+# PEER Illinois Funding Tool
 
-
-### <i> Authors: 
+<b>Authors:</b> 
 
 - Chris D. Poulos (Public Finance and Education Policy Analyst at the Chicago Teachers Union) cdpoulos@gmail.com
 
@@ -17,23 +16,19 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 [Directorty of Educaitonal Entities data (DEE)](https://www.isbe.net/pages/data-analysis-directories.aspx)
 
-> Used to join legislative districts.
+> Used to create a crosswalk between legislative districts and school districts.
 
 [EBF distribution calculation (EBF)](https://www.isbe.net/ebfdist)
 
-> FY25. Used for adequacy targets and gaps (both total dollars and positions).
+> Used for adequacy targets and gaps (both total dollars and positions). See "peer_app_data_cleaning_script.ipynb" to see how we cleaned this data.
 
 [Employment Information System teacher salary dataset (EIS)](https://www.isbe.net/Pages/Educator-Employment-Information.aspx)
 
-> Using for position counts. See Isbe_CleanJoin_20250515.ipynb for calculations to match EIS with EBF definitions.
+> Used for actual position counts. See "peer_app_data_cleaning_script.ipynb" to see how we cleaned this data.
 
 [Illinois Report Card (IRC)](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx)
 
-> SY24. Used for demographic data, revenue by source data, and for specific actual position FTE counts.
-
-[School Support Personnel Report (SSP)](https://www.isbe.net/Pages/Data-Analysis-Reports.aspx)
-
-> No longer using SSP, because of the lack of documentations. instead using EIS and IRC for position counts. I am keeping the SSP cleaning in the script in case it is useful in the future.
+> Used for demographic data, revenue by source data, and for specific actual position FTE counts. See "peer_app_data_cleaning_script.ipynb" to see how we cleaned this data.
 
 </details>
 
