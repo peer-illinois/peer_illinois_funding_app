@@ -59,11 +59,11 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 \logo.jpg
 
-> Peer logo image loaded into the peer_app.py
+> Peer logo image loaded into the peer_app.py.
 
 \peer_app.py
 
-> Streamlit web app
+> Streamlit web app.
 
 \peer_app_data_cleaning_script.ipynb
 
@@ -71,7 +71,7 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 \requirements.txt
 
-> Packages used in the appliction
+> Packages used in the appliction.
 
 
 </details>
