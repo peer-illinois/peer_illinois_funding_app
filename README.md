@@ -41,7 +41,7 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 > Root folder
 
-\.streamlit\config.toml
+\\.streamlit\config.toml
 
 > Used for design.
 
