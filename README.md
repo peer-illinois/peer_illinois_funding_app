@@ -10,11 +10,7 @@
 
 <b>Purpose:</b>
 
-A web app created for [Partnership for Equity and Education Rights Illinois](https://www.peerillinois.org/) designed to provide easy and intuitive access to statewide and district-level information on resource inequality and Illinois' K-12 Evidence-Based Funding formula for public schools.
-
-See todo.md for tasks
-
----
+A web app created for [Partnership for Equity and Education Rights Illinois](https://www.peerillinois.org/) designed to provide easy and intuitive access to statewide and district-level information on resource inequality and Illinois' K-12 school districts.
 
 <details>
 <summary><strong>Data sources</strong></summary>
@@ -46,41 +42,41 @@ See todo.md for tasks
 <h3>Folder contents:</h3>
 
 <details>
-<summary><strong>\peer_streamlit_app<br></br></strong></summary>
+<summary><strong>\peer_illinois_funding_app<br></br></strong></summary>
 
 > Root folder
 
-\.gitignore
+\.streamlit\config.toml
 
-> Setting parameters around what git can commit.
+> Used for design.
+
+\README.md
+
+> This file.
 
 \app_data_wide.parquet
 
-> Data for streamlit app. In parquet form for efficiency.
+> Data for streamlit app.
+
+\leg_dist_coverage.csv
+
+> A legislative district to ISBE school district crosswalk that contains the legislative district's students as a percent of total students in the respective school district. This was created using the Illinois State Board of Education's Directorty of Educaitonal Entities. This data is loaded into the peer_app.py.
+
+\logo.jpg
+
+> Peer logo image loaded into the peer_app.py
 
 \peer_app.py
 
 > Streamlit web app
 
-\peer_hex_codes.txt
+\peer_app_data_cleaning_script.ipynb
 
-> PEER brand colors
-
-\peer_logo.png
-
-> Peer logo image
-
-\README.md
-
-> The very file you are looking at at this very moment!
+> A Jupyter Notebook that shows how we clean our data.
 
 \requirements.txt
 
 > Packages used in the appliction
-
-\todo.md
-
-> list of tasks
 
 
 </details>
