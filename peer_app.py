@@ -419,7 +419,7 @@ with tab1:
     # First filter by the value "Total Resources (Dollar Amount)"
 
         actual_resources, adequate_resources, ase, df_merged, df_demographics, df_revenue, illinois_negative_gap_sum, illinois_negative_gap_sum_perschool = calculate_funding_metrics(df_filtered)
-    
+
     # Calculate per pupil values
     
     actual_per_pupil = actual_resources / ase if ase > 0 else 0
