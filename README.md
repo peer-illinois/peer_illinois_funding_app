@@ -49,9 +49,9 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 > This file.
 
-\app_data_wide.parquet
+\app_data_wide_fy####.parquet
 
-> Data for streamlit app.
+> Data for streamlit app. peer_app.py uses the most recent data. Users can manually add prior years by changing the pandas read_parquet (line 24) to the dataset of interest.
 
 \leg_dist_coverage.csv
 
@@ -67,7 +67,7 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 \peer_app_data_cleaning_script.ipynb
 
-> A Jupyter Notebook that shows how we clean our data.
+> A Jupyter Notebook that shows how we clean our data. Updated each year to adjust for changes to the data.
 
 \requirements.txt
 

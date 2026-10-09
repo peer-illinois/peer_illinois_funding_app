@@ -142,7 +142,6 @@ def calculate_funding_metrics(df_filtered):
         )
     df_gaps_perschool["Resource"] = df_gaps_perschool["Resource"].str.replace(" Gap Per School", "", regex=False)
 
-
     illinois_negative_gap_sum_perschool = df_gaps["Gaps"].min()     
 
     # Merge adequacy and actuals
@@ -616,18 +615,22 @@ with tab1:
     
         # Create a drop down menue that filters by resource types:
 
-        resource_filter = st.selectbox("Select Resource Type", options=[
-            "Core and Specialist Teachers",
-            "Special Education Teachers",
-            "Counselors",
-            "Nurses",
-            "Psychologists",
-            "Principals",
-            "Assistant Principals",
-            "English Learner (EL) Teachers"
-        ])   
-    
-        # Filter the dataframe based on the selected resource type
+        resource_options = {
+            "Core and Specialist Teachers": "Core and Specialist Teachers",
+            "Special Education Teachers": "Special Education Teachers",
+            "Counselors": "Counselors",
+            "Nurses": "Nurses",
+            "Psychologists": "Psychologists",
+            "Principals": "Principals",
+            "Assistant Principals": "Assistant Principals",
+            "English Learner (EL) Teachers": "EL Teachers",
+        }
+
+        selected_resource_label = st.selectbox(
+            "Select Resource Type",
+            options=list(resource_options.keys()),
+        )
+        resource_filter = resource_options[selected_resource_label]
 
         df_resource = df_merged[df_merged["Resource"] == resource_filter]
 
@@ -635,7 +638,7 @@ with tab1:
 
         adequacy_gap_per_school = df_resource["Gaps Per School"].iloc[0] if not df_resource.empty else 0
         adequacy_gap = df_resource["Gaps"].iloc[0] if not df_resource.empty else 0
-        resource_type = resource_filter.lower()
+        resource_type = selected_resource_label.lower()
         if selection == "State of Illinois":
                 if adequacy_gap >= 0:  # Positive gap (adequately staffed)
                     st.text(f"According to the EBF formula, Illinois schools are adequately staffed with {resource_type} positions; however, this may not reflect the on-the-ground needs at your school.")
