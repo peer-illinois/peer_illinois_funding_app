@@ -1,6 +1,8 @@
 # PEER School district resource inequality app
 # Authors: Chris D. Poulos (cdpoulos@gmail.com), Erykah Nava (EMAIL)
 
+# NOTE: The sum of all positive gaps for the State of Illinois is entered manually (line 446)
+
 import streamlit as st
 from PIL import Image
 import pandas as pd
@@ -441,7 +443,8 @@ with tab1:
         display_adequate = adequate_resources
         display_actual = actual_resources
         if selection == "State of Illinois":
-            display_gap =  -5679275708 
+            display_gap =  - 6964722395.86 
+ 
 
         else:
             display_gap = actual_resources - adequate_resources
@@ -499,7 +502,7 @@ with tab1:
                 }
             """,
         ):
-            st.subheader('Fiscal Year 2026 Adequacy Target:',help="The amount the EBF formula says your district needs to be adequately funded.")
+            st.subheader('Fiscal Year 2027 Adequacy Target:',help="The amount the EBF formula says your district needs to be adequately funded.")
             st.markdown(f'<h2 class="adequacy-dollars-amount">${display_adequate:,.0f}</h2>', unsafe_allow_html=True)
         with stylable_container(
             key="school_funding_resources",
@@ -968,7 +971,7 @@ This tool is meant to help families, students, educators, and advocates understa
 
 All data comes from the Illinois State Board of Education and represents the most recent data available. This is why the years for the datasets do not always match. 
 
-- [**Evidence-Based Funding (EBF) Distribution Calculation, Fiscal Year 2025-2026**](https://www.isbe.net/ebfdist):  
+- [**Evidence-Based Funding (EBF) Distribution Calculation, Fiscal Year 2026-2027**](https://www.isbe.net/ebfdist):  
 Used to calculate EBF adequacy targets (both funding amounts and positions) (referred to as *school funding needs* in the **District Resource Needs** tab) and district resources (referred to as *school funding resources* in the same tab).  
 - [**Illinois Report Card, School Year 2024-2025**](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx):  
 Used to calculate district revenue sources, demographics, and actual position counts.  
