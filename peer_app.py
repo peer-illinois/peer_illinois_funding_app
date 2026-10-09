@@ -19,7 +19,7 @@ st.set_page_config(page_title='🏫 IL school resource ≠ app', layout='centere
 def load_data():
     """Load the PEER app parquet file and legislative district coverage CSV"""
     try:
-        df = pd.read_parquet(r"app_data_wide.parquet")
+        df = pd.read_parquet(r"app_data_wide_fy2027.parquet")
         df_leg = pd.read_csv(r"leg_dist_coverage.csv")
         return df, df_leg
     except FileNotFoundError:
