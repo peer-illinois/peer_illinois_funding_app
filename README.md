@@ -45,9 +45,9 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 
 > Used for design.
 
-\README.md
+\analysis_2026.py
 
-> This file.
+> Create output for basis report on EBF. Will be used in year-to-year comparisons.
 
 \app_data_wide_fy####.parquet
 
@@ -68,6 +68,10 @@ A web app created for [Partnership for Equity and Education Rights Illinois](htt
 \peer_app_data_cleaning_script.ipynb
 
 > A Jupyter Notebook that shows how we clean our data. Updated each year to adjust for changes to the data.
+
+\README.md
+
+> This file.
 
 \requirements.txt
 
