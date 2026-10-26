@@ -14,9 +14,9 @@
 - What drove the change? (Resources compared to target, low-income count difference, CPPRT difference)
 
 ### Outputs 
-- **Table 1.** Adequacy target, actual resources, and adequacy gap FY27 and FY26 (dollars) (Data sources: Peer Illinois Funding Tool dataset, which combines EBF Distribution Calculation data with Illinois Report Card and Administrator and Teacher Salaries and Benefits Report data)
-- **Table 2.** Adequacy target, actual resources, and adequacy gap FY27 and FY26 (positions) (Data sources: Peer Illinois Funding Tool dataset, which combines EBF Distribution Calculation data with Illinois Report Card and Administrator and Teacher Salaries and Benefits Report data)
-- **Table 3.** District and student count by adequacy level category SY26 and SY25 (Data source: Illinois Report Card)
-- **Table 4.** Student demographics by adequacy level category SY26 and SY25 (Data source: Illinois Report Card)
-- **Figure 1.** EBF adequacy map (Data source: Illinois Report Card, Directory of Educational Entities (for NCES to RCDTS crosswalk), US Census Tigerline/Shapefiles for unit, elementary, and secondary school district shapefiles)
+- **Table 1.** Adequacy target, actual resources, and adequacy gap FY27 and FY26 (dollars) (Data sources: Peer Illinois Funding Tool dataset, which combines EBF Distribution Calculation data with Illinois Report Card and Administrator and Teacher Salaries and Benefits Report data) +analysis_2026
+- **Table 2.** Adequacy target, actual resources, and adequacy gap FY27 and FY26 (positions) (Data sources: Peer Illinois Funding Tool dataset, which combines EBF Distribution Calculation data with Illinois Report Card and Administrator and Teacher Salaries and Benefits Report data) +analysis_2026
+- **Table 3.** District and student count by adequacy level category SY26 and SY25 (Data source: Illinois Report Card) +analysis_2026
+- **Table 4.** Student demographics by adequacy level category SY26 and SY25 (Data source: Illinois Report Card) +analysis_2026
+- **Figure 1.** EBF adequacy map (Data source: Illinois Report Card, Directory of Educational Entities (for NCES to RCDTS crosswalk), US Census Tigerline/Shapefiles for unit, elementary, and secondary school district shapefiles) +analysis_2026
 
