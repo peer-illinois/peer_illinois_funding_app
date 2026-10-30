@@ -22,7 +22,7 @@ def load_data():
     """Load the PEER app parquet file and legislative district coverage CSV"""
     try:
         df = pd.read_parquet(r"app_data_wide_fy2027.parquet")
-        df_leg = pd.read_csv(r"leg_dist_coverage.csv")
+        df_leg = pd.read_csv(r"leg_dist_coverage_2026-10-30.csv")
         return df, df_leg
     except FileNotFoundError:
         st.error("Data file not found. Please ensure the parquet file is in the correct location.")
@@ -709,7 +709,7 @@ with tab1:
 )
         fig_rev.update_yaxes(title_font_color='#141554')
         st.plotly_chart(fig_rev, use_container_width=True)
-        st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2025](https://www.isbe.net/reportcard)</sub>""",unsafe_allow_html=True)
+        st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2026](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx)</sub>""",unsafe_allow_html=True)
 
         st.markdown("""
 <sub><b>Other local funding</b> comes from a variety of sources like fees for tuition, transportation, or textbooks.</sub>
@@ -781,7 +781,7 @@ with tab1:
         fig_demo.update_yaxes(title_font_color='#141554')
         
         st.plotly_chart(fig_demo, width="content")
-        st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2025](https://www.isbe.net/reportcard)</sub>
+        st.markdown("""<sub> <b>Source:</b> [Illinois State Board of Education Report Card School Year 2026](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx)</sub>
                     
 <sub><b>Notes:</b> 1) If no percentage is displayed above the bar it means that this data was redacted by the Illinois State Board of Education (ISBE), not that there are 0 students of the demographic group. ISBE redacts demographic data when the student count is below 10. 2) If 0% is displayed above the bar it may mean that the demographic group comprised less than 1% of total students in that demographic group, not that there were 0 students of that demographic group. Hover over the bar to see the true percentage, or tap on the bar if you are using a phone or tablet. You may have to use the zoom tool (the magnifying glass icon above the chart) to zoom into a bar that is below 0 to see the true percentage. 3) Percentages do not add up to 100 percent. For more information on this see the "About the Data" note in the "About" tab.</sub> 
                     """,unsafe_allow_html=True)
@@ -977,12 +977,12 @@ All data comes from the Illinois State Board of Education and represents the mos
 
 - [**Evidence-Based Funding (EBF) Distribution Calculation, Fiscal Year 2026-2027**](https://www.isbe.net/ebfdist):  
 Used to calculate EBF adequacy targets (both funding amounts and positions) (referred to as *school funding needs* in the **District Resource Needs** tab) and district resources (referred to as *school funding resources* in the same tab).  
-- [**Illinois Report Card, School Year 2024-2025**](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx):  
+- [**Illinois Report Card, School Year 2025-2026**](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx):  
 Used to calculate district revenue sources, demographics, and actual position counts.  
 - [**Administrator and Teacher Salaries and Benefits Report EIS Salary Datasets, School Year 2024-2025**](https://www.isbe.net/Pages/Data-Analysis-Reports.aspx):  
 Used to calculate actual position counts not available in the Illinois Report Card.  
-- [**Directory of Educational Entities (retrieved 9/16/2025)**](https://www.isbe.net/pages/data-analysis-directories.aspx):  
-Used to calculate students in legislative districts as a percentage of their respective school districts.  
+- [**Directory of Educational Entities (retrieved 10/30/2025)**](https://www.isbe.net/pages/data-analysis-directories.aspx):  
+Used to calculate students in legislative districts as a percentage of their respective school districts. The calcualtion can be found in the leg_coverage_calculation.py script.
 
 <sub><b>Note:</b> For dollar-amount adequacy gaps (referred to as the <i>school funding gap</i> in the <b>School District View</b> tab), we use the EBF Distribution Calculation. For adequate position gaps, we subtract the actual positions (from the Illinois Report Card and Educator Employment Information) from the adequate staffing levels provided in the EBF Distribution Calculation. <b> Demographics </b> do not add up to 100%. Racial groups, low-income students, IEP students, and English Learner students are grouped separately. Racial groups do not add up to 100 percent because the "two or more races" category was exlude. The other groups are percentages of their own group. For example, low-income students are a percentage of low-income and non-low-income students. </sub>                                               
                 """,unsafe_allow_html=True)
