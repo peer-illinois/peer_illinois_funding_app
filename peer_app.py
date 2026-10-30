@@ -222,7 +222,7 @@ def calculate_funding_metrics(df_filtered):
 
 st.image("logo.jpg")
 
-st.markdown("""**\*\*We will be updating the PEER Illinois Funding Tool on Friday, October 30th after the release of the Illinois Report Card School Year 2026 data release. Currently the EBF adequacy target, final resources, and funding gap dollars are up-to-date.\*\***""", unsafe_allow_html=True)
+st.markdown("""**Updated: 10/30/2026**""", unsafe_allow_html=True)
 tab0,tab1,tab2,tab3 = st.tabs(["Start Here!","School District View","Legislative View","About"]) # Erykah - Change tab names
 
 with tab0:
