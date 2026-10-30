@@ -819,6 +819,7 @@ Look up information about adequate funding and district demographics by legislat
 
         df = filtered_df.merge(df,on="RCDTS",how="left")
 
+
     elif filter_type == "Legislator Name":  # Filter by Legislator
         # Legislator selection
         legislators = sorted(df_leg['Legislator Name'].dropna().unique())
