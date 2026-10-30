@@ -4,7 +4,6 @@
 - Provide advocates with easily interpretable brief on district resources and demographics using new EBF and IRC releases to help advocate for full funding.
 - Highlight [the Peer Illinois Funding tool](https://peerillinoisfundingtool.streamlit.app/) as an advocacy tool.
 
-
 ### Research questions:
 - What is Illinois' adequacy target, actual resources, and adequacy gap (dollars and positions)?
 - How many districts are underfunded? How many students are in underfunded districts?

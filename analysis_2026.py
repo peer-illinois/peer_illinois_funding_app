@@ -58,7 +58,6 @@ df_rcf_25_district = df_rcf_25_district[["RCDTS","District","EBF Tier","% EBF Ca
 df_rcg_25_state = df_rcg_25_state[["RCDTS","# Student Enrollment","# Student Enrollment - White","# Student Enrollment - Black or African American", "# Student Enrollment - Hispanic or Latino","# Student Enrollment - Asian","# Student Enrollment - Native Hawaiian or Other Pacific Islander","# Student Enrollment - American Indian or Alaska Native","# Student Enrollment - IEP","# Student Enrollment - EL","# Student Enrollment - Former EL","# Student Enrollment - Never EL","# Student Enrollment - Low Income","# Student Enrollment - Homeless"]]
 df_rcf_25_state = df_rcf_25_state[["RCDTS","District","EBF Tier","% EBF Capacity to Meet Expectations","$ Total Per-Pupil Expenditures - State/Local","$ Local Property Taxes","% Local Property Taxes","$ Other Local Funding","% Other Local Funding","$ Evidence-Based Funding","% Evidence-Based Funding","$ Other State Funding","% Other State Funding","$ Federal Funding","% Federal Funding","$ Total Revenue Source","$ EAV per Pupil","$ Total School Tax Rate per $100","$ Instructional Expenditure per Pupil"]]
 
-
 print(df_rcg_25_district.columns)
 print(df_rcf_25_district.columns)
 print(df_rcf_25_district.shape)
@@ -135,6 +134,10 @@ df_dem_25 = df_dem_25.groupby('adequacy_level_category').agg({
     '# Student Enrollment - Homeless':'sum'
 })
 
+df_dem_25 = df_dem_25.rename(columns={'adequacy_level_category': 'district_count'})
+
+df_dem_25.reset_index(inplace=True)
+
 # remove RCDTS, District, EBF Tier from df_irc_25_state
 df_irc_25_state = df_irc_25_state.drop(columns=["RCDTS", "District", "EBF Tier"])
 df_irc_25_state['adequacy_level_category'] = "State of Illinois"
@@ -143,12 +146,44 @@ for col in df_irc_25_state.columns:
     if col in df_dem_25.columns:
         print(f"{col} IS FOUND in df_dem_25")
         # replace df_dem_25 col with df_irc_25_state col
-        df_dem_25[col] = df_irc_25_state[col]
     else:
         print(f"{col} ***IS NOT*** FOUND in df_dem_25")
 
 print(len(df_dem_25.columns))
 print(len(df_irc_25_state.columns))
+
+print(df_dem_25.dtypes)
+print(df_irc_25_state.dtypes)
+
+df_dem_25['$ Total Per-Pupil Expenditures - State/Local'] = df_dem_25['$ Total Per-Pupil Expenditures - State/Local'].astype(float)
+df_dem_25['$ Local Property Taxes'] = df_dem_25['$ Local Property Taxes'].astype(float)
+df_dem_25['% Local Property Taxes'] = df_dem_25['% Local Property Taxes'].astype(float)
+df_dem_25['$ Other Local Funding'] = df_dem_25['$ Other Local Funding'].astype(float)
+df_dem_25['% Other Local Funding'] = df_dem_25['% Other Local Funding'].astype(float)
+df_dem_25['$ Evidence-Based Funding'] = df_dem_25['$ Evidence-Based Funding'].astype(float)
+df_dem_25['% Evidence-Based Funding'] = df_dem_25['% Evidence-Based Funding'].astype(float)
+df_dem_25['$ Other State Funding'] = df_dem_25['$ Other State Funding'].astype(float)
+df_dem_25['% Other State Funding'] = df_dem_25['% Other State Funding'].astype(float)
+df_dem_25['$ Federal Funding'] = df_dem_25['$ Federal Funding'].astype(float)
+df_dem_25['% Federal Funding'] = df_dem_25['% Federal Funding'].astype(float)
+df_dem_25['$ Total Revenue Source'] = df_dem_25['$ Total Revenue Source'].astype(float)
+df_dem_25['$ EAV per Pupil'] = df_dem_25['$ EAV per Pupil'].astype(float)
+df_dem_25['$ Total School Tax Rate per $100'] = df_dem_25['$ Total School Tax Rate per $100'].astype(float)
+df_dem_25['$ Instructional Expenditure per Pupil'] = df_dem_25['$ Instructional Expenditure per Pupil'].astype(float)
+df_dem_25['# Student Enrollment'] = df_dem_25['# Student Enrollment'].astype(float)
+df_dem_25['# Student Enrollment - White'] = df_dem_25['# Student Enrollment - White'].astype(float)
+df_dem_25['# Student Enrollment - Black or African American'] = df_dem_25['# Student Enrollment - Black or African American'].astype(float)
+df_dem_25['# Student Enrollment - Hispanic or Latino'] = df_dem_25['# Student Enrollment - Hispanic or Latino'].astype(float)
+df_dem_25['# Student Enrollment - Asian'] = df_dem_25['# Student Enrollment - Asian'].astype(float)
+df_dem_25['# Student Enrollment - Native Hawaiian or Other Pacific Islander'] = df_dem_25['# Student Enrollment - Native Hawaiian or Other Pacific Islander'].astype(float)
+df_dem_25['# Student Enrollment - American Indian or Alaska Native'] = df_dem_25['# Student Enrollment - American Indian or Alaska Native'].astype(float)
+df_dem_25['# Student Enrollment - IEP'] = df_dem_25['# Student Enrollment - IEP'].astype(float)
+df_dem_25['# Student Enrollment - EL'] = df_dem_25['# Student Enrollment - EL'].astype(float)
+df_dem_25['# Student Enrollment - Former EL'] = df_dem_25['# Student Enrollment - Former EL'].astype(float)
+df_dem_25['# Student Enrollment - Never EL'] = df_dem_25['# Student Enrollment - Never EL'].astype(float)
+df_dem_25['# Student Enrollment - Low Income'] = df_dem_25['# Student Enrollment - Low Income'].astype(float)
+df_dem_25['# Student Enrollment - Homeless'] = df_dem_25['# Student Enrollment - Homeless'].astype(float)
+
 
 df_irc_25_state['% EBF Capacity to Meet Expectations']=df_irc_25_state['% EBF Capacity to Meet Expectations'].astype(float)
 df_irc_25_state['$ Total Per-Pupil Expenditures - State/Local'] = df_irc_25_state['$ Total Per-Pupil Expenditures - State/Local'].astype(float)
@@ -180,9 +215,10 @@ df_irc_25_state['# Student Enrollment - Never EL'] = df_irc_25_state['# Student 
 df_irc_25_state['# Student Enrollment - Low Income'] = df_irc_25_state['# Student Enrollment - Low Income'].astype(float)
 df_irc_25_state['# Student Enrollment - Homeless'] = df_irc_25_state['# Student Enrollment - Homeless'].astype(float)
 
-df_concat = pd.concat([df_irc_25_state, df_dem_25], axis=0,)
+df_concat = pd.concat([df_irc_25_state, df_dem_25], axis=0)
 
-
+df_irc_25_state.head()
+df_dem_25.head()
 
 # remove "# Student Enrollment" from demographic_columns
 #demographic_columns_no_total = [col for col in demographic_columns if col != "# Student Enrollment"]

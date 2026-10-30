@@ -979,7 +979,7 @@ All data comes from the Illinois State Board of Education and represents the mos
 Used to calculate EBF adequacy targets (both funding amounts and positions) (referred to as *school funding needs* in the **District Resource Needs** tab) and district resources (referred to as *school funding resources* in the same tab).  
 - [**Illinois Report Card, School Year 2024-2025**](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx):  
 Used to calculate district revenue sources, demographics, and actual position counts.  
-- [**Administrator and Teacher Salaries and Benefits Report EIS Salary Datasets, School Year 2024-2025**](https://www.isbe.net/Pages/Educator-Employment-Information.aspx):  
+- [**Administrator and Teacher Salaries and Benefits Report EIS Salary Datasets, School Year 2024-2025**](https://www.isbe.net/Pages/Data-Analysis-Reports.aspx):  
 Used to calculate actual position counts not available in the Illinois Report Card.  
 - [**Directory of Educational Entities (retrieved 9/16/2025)**](https://www.isbe.net/pages/data-analysis-directories.aspx):  
 Used to calculate students in legislative districts as a percentage of their respective school districts.  
